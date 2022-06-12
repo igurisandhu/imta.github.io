@@ -76,33 +76,6 @@ body {
   top: 1%;
 }
 
-/* .text::-webkit-scrollbar {
-  width: 25px;
-}
-
-/* Track */
-.text::-webkit-scrollbar-track {
-  border: 2px solid #FF7840;
-  border-radius: 8px;
-}
-
-/* Handle */
-.text::-webkit-scrollbar-thumb {
-  background:url(./img/slide.png);
-  background:-webkit-url('./img/slide.png') ;
-  border-radius: 10px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-/* Handle on hover */
-.text::-webkit-scrollbar-thumb:hover {
-  background: url(./img/slide.png);
-  background:-webkit-url('./img/slide.png');
-  border-radius: 10px;
-  background-size: 100% 100%;
-  box-shadow: 0 0 10px #1a1a1a;
-} */
 
 #overlay {
   background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1a1a9a), color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #1a1a1a9a)) /* Chrome,Safari4+ */;

@@ -1,14 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap');
-
-:root {
-  --scrollbar-track-color: transparent;
-  --scrollbar-color: red;
-
-  --scrollbar-size: .375rem;
-  --scrollbar-minlength: 1.5rem;
-  /* Minimum length of scrollbar thumb (width of horizontal, height of vertical) */
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -34,18 +24,18 @@ body {
   box-shadow: inset -5px 2px 7px 0px rgb(255 255 255 / 26%)
 }
 
-#mainImagesDiv {
+#mainImagesDiv{
   position: relative;
 }
 
-#images {
+#images{
   background-size: 100% 100%;
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-#images1 {
+#images1{
   background-size: 100% 100%;
   position: absolute;
   width: 100%;
@@ -68,6 +58,7 @@ body {
 }
 
 #text1 {
+  -webkit-overflow-scrolling: touch !important;
   overflow: scroll;
   direction: rtl;
   position: relative;
@@ -85,43 +76,62 @@ body {
   top: 1%;
 }
 
+.text::-webkit-scrollbar {
+  width: 25px;
+}
 
+/* Track */
+.text::-webkit-scrollbar-track {
+  border: 2px solid #FF7840;
+  border-radius: 8px;
+}
+
+/* Handle */
+.text::-webkit-scrollbar-thumb {
+  background:url(./img/slide.png);
+  background:-webkit-url('./img/slide.png') ;
+  border-radius: 10px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Handle on hover */
+.text::-webkit-scrollbar-thumb:hover {
+  background: url(./img/slide.png);
+  background:-webkit-url('./img/slide.png');
+  border-radius: 10px;
+  background-size: 100% 100%;
+  box-shadow: 0 0 10px #1a1a1a;
+}
 
 #overlay {
-  background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1a1a9a), color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #1a1a1a9a))
-    /* Chrome,Safari4+ */
-  ;
-  background: -webkit-linear-gradient(#1a1a1a9a 0%, rgba(255, 255, 255, 0) 0%, #1a1a1aab 100%);
-  /* Chrome10+,Safari5.1+ */
+  background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1a1a9a), color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #1a1a1a9a)) /* Chrome,Safari4+ */;
+  background: -webkit-linear-gradient(#1a1a1a9a 0%, rgba(255, 255, 255, 0) 0%, #1a1a1aab 100%);  /* Chrome10+,Safari5.1+ */
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top:0;
+  left:0;
 }
-
-.content span {
+.content span{
   padding-bottom: 33px;
   display: block;
   font-size: 18px;
   font-weight: 300;
   line-height: 24px;
 }
-
-.content h2 {
+.content h2{
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 33px;
   line-height: 53px;
 }
-
-.content h3 {
+.content h3{
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 33px;
 }
-
-.slide-me {
+.slide-me{
   position: absolute;
   right: -22px;
   writing-mode: vertical-rl;

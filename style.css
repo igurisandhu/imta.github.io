@@ -1,16 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #292929;
-  font-family: 'Roboto Condensed', sans-serif;
+  /* font-family: 'Roboto Condensed', sans-serif; */
 }
 
 .main {
@@ -58,7 +52,6 @@ body {
 }
 
 #text1 {
-  -webkit-overflow-scrolling: touch !important;
   overflow: scroll;
   direction: rtl;
   position: relative;

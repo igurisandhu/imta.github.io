@@ -75,7 +75,7 @@ body {
   top: 1%;
 }
 
-::-webkit-scrollbar {
+.text::-webkit-scrollbar {
   width: 25px;
 }
 
@@ -87,7 +87,8 @@ body {
 
 /* Handle */
 .text::-webkit-scrollbar-thumb {
-  background:url(./img/slide.png) ;
+  background:url(./img/slide.png);
+  background:-webkit-url('./img/slide.png') ;
   border-radius: 10px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -95,7 +96,8 @@ body {
 
 /* Handle on hover */
 .text::-webkit-scrollbar-thumb:hover {
-  background:url(./img/slide.png) ;
+  background: url(./img/slide.png);
+  background:-webkit-url('./img/slide.png');
   border-radius: 10px;
   background-size: 100% 100%;
   box-shadow: 0 0 10px #1a1a1a;

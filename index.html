@@ -126,7 +126,7 @@
         let images1 = document.getElementById('images1');
 
         // disable mouse wheel scroll
-        divText.addEventListener("mousewheel", MouseWheelHandler, false);
+        // divText.addEventListener("mousewheel", MouseWheelHandler, false);
         function MouseWheelHandler(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -136,7 +136,7 @@
         //auto scroll to top bottom
         divText.onmouseup = function () {
             let scrollPortion = (divText.scrollTop / divText.scrollHeight) * 100;
-            if (scrollPortion > 50) {
+            if (scrollPortion > 45) {
                 divText.scrollTop = divText.scrollHeight;
             } else {
                 divText.scrollTop = 0;
@@ -144,17 +144,17 @@
         }
 
         // disable arrow key scroll
-        window.onkeydown = function (e) {
-            if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
-                e.view.event.preventDefault();
-            }
-        }
-        // disable arrow key scroll
-        window.onkeypress = function (e) {
-            if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
-                e.view.event.preventDefault();
-            }
-        }
+        // window.onkeydown = function (e) {
+        //     if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        //         e.view.event.preventDefault();
+        //     }
+        // }
+        // // disable arrow key scroll
+        // window.onkeypress = function (e) {
+        //     if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        //         e.view.event.preventDefault();
+        //     }
+        // }
 
         // images
         let imagesArray = [

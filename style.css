@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap');
+
+:root {
+  --scrollbar-track-color: transparent;
+  --scrollbar-color: rgba(0,0,0,.2);
+
+  --scrollbar-size: .375rem;
+  --scrollbar-minlength: 1.5rem; /* Minimum length of scrollbar thumb (width of horizontal, height of vertical) */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -87,8 +96,7 @@ body {
 
 /* Handle */
 .text::-webkit-scrollbar-thumb {
-  background:url(./img/slide.png);
-  background:-webkit-url('./img/slide.png') ;
+  background-color: var(--scrollbar-color);
   border-radius: 10px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -96,20 +104,20 @@ body {
 
 /* Handle on hover */
 .text::-webkit-scrollbar-thumb:hover {
-  background: url(./img/slide.png);
-  background:-webkit-url('./img/slide.png');
+  background-color: var(--scrollbar-color);
   border-radius: 10px;
   background-size: 100% 100%;
   box-shadow: 0 0 10px #1a1a1a;
 }
 
 #overlay {
-  background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1a1a9a), color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #1a1a1a9a));
-  background: -webkit-linear-gradient(#1a1a1a9a 0%, rgba(255, 255, 255, 0) 0%, #1a1a1aab 100%);
+  background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1a1a9a), color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #1a1a1a9a)) /* Chrome,Safari4+ */;
+  background: -webkit-linear-gradient(#1a1a1a9a 0%, rgba(255, 255, 255, 0) 0%, #1a1a1aab 100%);  /* Chrome10+,Safari5.1+ */
   width: 100%;
   height: 100%;
   position: absolute;
-  right: 0;
+  top:0;
+  left:0;
 }
 .content span{
   padding-bottom: 33px;

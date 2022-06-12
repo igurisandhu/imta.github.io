@@ -230,7 +230,7 @@
 
         function loadCSS(file) {
             var link = document.createElement("link");
-            link.href = chrome.extension.getURL(file + '.css');
+            link.href = file + '.css';
             link.id = file;
             link.type = "text/css";
             link.rel = "stylesheet";

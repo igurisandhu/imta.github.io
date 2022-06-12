@@ -187,9 +187,13 @@
             arrow.style.top = `${Math.floor(scrollPortion)}%`;
 
             overlay.style.top = divText.scrollTop + 'px';
+            overlay.style.background = `-webkit-gradient(linear, left top, left bottom, color-stop(${Math.floor(scrollPortion) - 30}%, rgba(26, 26, 26, 70%)), color-stop(${Math.floor(scrollPortion) + 20}%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(26, 26, 26, 70%)));`;
+
             overlay.style.background = `-webkit-linear-gradient(rgba(26, 26, 26, 70%) ${Math.floor(scrollPortion) - 30}%, rgba(255, 255, 255, 0) ${Math.floor(scrollPortion) + 20}%, rgba(26, 26, 26, 100%) 100%)`;
 
             if (divText.scrollTop == 0) {
+                overlay.style.background = `-webkit-gradient(linear, left top, left bottom, color-stop(${Math.floor(scrollPortion)}%, rgba(26, 26, 26, 70%)), color-stop(${Math.floor(scrollPortion)}%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(26, 26, 26, 70%)));`;
+
                 overlay.style.background = `-webkit-linear-gradient(rgba(26, 26, 26, 100%) ${Math.floor(scrollPortion)}%, rgba(255, 255, 255, 0) ${Math.floor(scrollPortion)}%, rgba(26, 26, 26, 100%) 100%)`;
             }
 

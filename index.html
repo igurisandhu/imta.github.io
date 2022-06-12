@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
@@ -119,6 +119,8 @@
 
     <script>
 
+        loadCSS('/style');
+
         // elements access
         let arrow = document.getElementById('arrow');
         let divText = document.getElementById('text1');
@@ -225,6 +227,20 @@
                 }
             }
         };
+
+        function loadCSS(file) {
+            var link = document.createElement("link");
+            link.href = chrome.extension.getURL(file + '.css');
+            link.id = file;
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            document.getElementsByTagName("head")[0].appendChild(link);
+        }
+
+        // function unloadCSS(file) {
+        //     var cssNode = document.getElementById(file);
+        //     cssNode && cssNode.parentNode.removeChild(cssNode);
+        // }
     </script>
 </body>
 

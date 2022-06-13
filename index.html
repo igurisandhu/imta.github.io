@@ -30,7 +30,7 @@
 
             </div>
 
-            <div onscroll="arrowAni()" class="content">
+            <div class="content">
                 <!-- <p> -->
                 <h2>Καιρός – Κακοκαιρία «Ελπίδα»: Χιόνια ήδη στην Αθήνα – Πού θα χιονίσει τις επόμενες ώρες</h2>
 
@@ -118,6 +118,11 @@
     </div>
 
     <script>
+
+        var isSafari = window.safari !== undefined;
+        if (isSafari){
+            document.getElementById('text1').classList.remove('text');
+        };
 
         // elements access
         let arrow = document.getElementById('arrow');

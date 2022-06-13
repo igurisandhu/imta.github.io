@@ -3,13 +3,14 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link rel="stylesheet" href="./style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
 </head>
 
-<body contenteditable="false" >
+<body>
     <div class="main">
 
         <div class="flexdivs" id="mainImagesDiv">
@@ -24,7 +25,7 @@
             </div>
         </div>
 
-        <div id="text1" onscroll="arrowAni()" class="flexdivs text">
+        <div id="text1" onscroll="arrowAni()"  class="flexdivs text longEnough mCustomScrollbar" data-mcs-theme="dark">
 
             <div id="overlay">
 
@@ -111,15 +112,25 @@
                 <!-- </p> -->
             </div>
         </div>
-        <div class="arrowDiv">
+        <!-- <div class="arrowDiv">
             <img id="arrow" src="img/arrow-down.png">
-            <!-- <img id="arrow" src="img/cross.png"> -->
-        </div>
+            
+        </div> -->
+
+        
     </div>
 
-    <script>
+    <!-- <div class="longEnough mCustomScrollbar" data-mcs-theme="dark">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima velit tenetur illum aliquid eum modi, delectus nemo corporis suscipit, sequi voluptate voluptatibus voluptatum repellat repudiandae doloremque nam, eligendi rerum. Repellendus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima velit tenetur illum aliquid eum modi, delectus nemo corporis suscipit, sequi voluptate voluptatibus voluptatum repellat repudiandae doloremque nam, eligendi rerum. Repellendus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima velit tenetur illum aliquid eum modi, delectus nemo corporis suscipit, sequi voluptate voluptatibus voluptatum repellat repudiandae doloremque nam, eligendi rerum. Repellendus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima velit tenetur illum aliquid eum modi, delectus nemo corporis suscipit, sequi voluptate voluptatibus voluptatum repellat repudiandae doloremque nam, eligendi rerum. Repellendus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima velit tenetur illum aliquid eum modi, delectus nemo corporis suscipit, sequi voluptate voluptatibus voluptatum repellat repudiandae doloremque nam, eligendi rerum. Repellendus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima velit tenetur illum aliquid eum modi, delectus nemo corporis suscipit, sequi voluptate voluptatibus voluptatum repellat repudiandae doloremque nam, eligendi rerum. Repellendus.
 
-        loadCSS('/style');
+    </div> -->
+
+    <script>
 
         // elements access
         let arrow = document.getElementById('arrow');
@@ -227,20 +238,15 @@
                 }
             }
         };
-
-        function loadCSS() {
-            var link = document.createElement("link");
-            link.href = '/imta.github.io/style.css';
-            link.id = '/imta.github.io/style';
-            link.type = "text/css";
-            link.rel = "stylesheet";
-            document.getElementsByTagName("head")[0].appendChild(link);
-        }
-
-        // function unloadCSS(file) {
-        //     var cssNode = document.getElementById(file);
-        //     cssNode && cssNode.parentNode.removeChild(cssNode);
-        // }
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+          (function($){
+        $(window).on("load",function(){
+            $(".content").mCustomScrollbar();
+        });
+    })(jQuery);
     </script>
 </body>
 

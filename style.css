@@ -57,17 +57,17 @@ body {
   margin-left: 10px;
 }
 
-/* #text1 {
+#text1 {
   overflow: scroll;
   direction: rtl;
   position: relative;
   overflow-x: hidden;
   text-align: end;
   padding-left: 56px;
-  
+  /* padding-right: 50px; */
   padding-top: 28px;
-  
-} */
+  /* padding-bottom: 28px; */
+}
 
 #arrow {
   color: red;
@@ -75,33 +75,33 @@ body {
   top: 1%;
 }
 
-/* #text1::-webkit-scrollbar {
+#text1::-webkit-scrollbar {
   width: 25px;
-} */
+}
 
 /* Track */
-/* #text1::-webkit-scrollbar-track {
+#text1::-webkit-scrollbar-track {
   border: 2px solid #FF7840;
   border-radius: 8px;
-} */
+}
 
 /* Handle */
-/* #text1::-webkit-scrollbar-thumb {
+#text1::-webkit-scrollbar-thumb {
   background:url(./img/slide.png);
   background:-webkit-url('./img/slide.png') ;
   border-radius: 10px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-} */
+}
 
 /* Handle on hover */
-/* #text1::-webkit-scrollbar-thumb:hover {
+#text1::-webkit-scrollbar-thumb:hover {
   background: url(./img/slide.png);
   background:-webkit-url('./img/slide.png');
   border-radius: 10px;
   background-size: 100% 100%;
   box-shadow: 0 0 10px #1a1a1a;
-} */
+}
 
 #overlay {
   background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1a1a9a), color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #1a1a1a9a));
@@ -137,28 +137,4 @@ body {
   text-transform: uppercase;
   top: 30%;
   font-size: 12px;
-}
-.mCSB_scrollTools {
-  width: 25px !important;
-  left: 0 !important;
-  top: 0 !important;
-  right: auto !important;
-  border: 2px solid #FF7840;
-  border-radius: 10px;
-}
-.mCSB_container.mCS_y_hidden.mCS_no_scrollbar_y{
-  padding-left: 56px !important;
-  padding-top: 28px !important;
-}
-.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-  background-image:url(./img/slide.png) !important;
-  background-color: transparent !important;
-  background:-webkit-url('./img/slide.png') ;
-  border-radius: 10px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  width: 25px !important;
-}
-.mCSB_draggerRail{
-  background-color: transparent !important;
 }

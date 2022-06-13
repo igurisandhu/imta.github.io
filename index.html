@@ -211,7 +211,7 @@
                 }
             };
 
-            if (divText.scrollHeight - divText.scrollTop === divText.clientHeight) {
+            if (Math.ceil(divText.scrollHeight - divText.scrollTop) === divText.clientHeight) {
                 arrow.setAttribute('src', "img/cross.png");
             } else {
                 arrow.setAttribute('src', "img/arrow-down.png");

@@ -75,18 +75,18 @@ body {
   top: 1%;
 }
 
-#text1::-webkit-scrollbar {
+.text::-webkit-scrollbar {
   width: 25px;
 }
 
 /* Track */
-#text1::-webkit-scrollbar-track {
+.text::-webkit-scrollbar-track {
   border: 2px solid #FF7840;
   border-radius: 8px;
 }
 
 /* Handle */
-#text1::-webkit-scrollbar-thumb {
+.text::-webkit-scrollbar-thumb {
   background:url(./img/slide.png);
   background:-webkit-url('./img/slide.png') ;
   border-radius: 10px;
@@ -95,7 +95,7 @@ body {
 }
 
 /* Handle on hover */
-#text1::-webkit-scrollbar-thumb:hover {
+.text::-webkit-scrollbar-thumb:hover {
   background: url(./img/slide.png);
   background:-webkit-url('./img/slide.png');
   border-radius: 10px;
